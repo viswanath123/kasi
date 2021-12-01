@@ -8,7 +8,7 @@ module "vpc" {
 }
 resource "aws_instance" "server" {
   count = 1
-  ami = 
+  ami = "ami-0108d6a82a783b352"
   key_name = "id_rsa"
   instance_type = "t2.micro"
   subnet_id = module.vpc.subnet_id.id
